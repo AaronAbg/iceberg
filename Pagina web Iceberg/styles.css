@@ -1,0 +1,384 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Estilos para el menú */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Fondo del menú */
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s, background-color 0.3s; /* Transición para color y fondo */
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* Altura del subrayado */
+    background-color: #17a2ff; /* Color del subrayado */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; /* Transición del subrayado */
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav ul li a:hover {
+    color: #17a2ff; /* Color del texto en hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente blanco en hover */
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Estilo general para los botones de redes sociales */
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Estilos específicos para cada red social */
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.instagram {
+    background-color: #DD2A7B;
+}
+.whatsap {
+    background-color: #7ebd61;
+}
+h1{
+    font-size: 80px;
+    text-align: center;
+}
+#sol{
+    color: #ddd;
+    text-align: center;
+    font-size: 35px;
+}
+h2{
+    text-align: center;
+    font-size: 35px;
+    font-family: fantasy
+}
+#oferta{
+    font-size: 20px;
+ margin-left: 60px;
+ margin-right: 60px;
+}
+pre {
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: pre-wrap; /* Ajusta el texto dentro de la caja */
+    background-color: #f4f4f4; /* Fondo para mejorar la legibilidad */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    border: 1px solid #ddd; /* Borde para definir el área */
+}
+#we {
+    font-size: 20px;
+    margin-left: 60px;
+    margin-right: 60px;    
+}
+#inicio{
+    display: flex;
+    flex-direction: column;
+text-align: center;
+justify-content: space-evenly;
+align-items: center;
+height: 70vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5), /* Primer color del degradado */
+        rgba(0, 0, 0, 0.5)  /* Segundo color del degradado */
+    ),
+    url('Imagenes/negocios.jpg'); /* URL de la imagen de fondo */
+
+background-size: cover;
+}
+#servicios {
+    display: flex;
+    flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+height: 70vh;
+}
+#nosotros {
+    display: flex;
+    flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+height: 70vh;
+}
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+height: 70vh;
+}
+/* Estilo para centrar el contenedor del carrusel en la página */
+#blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72vh; /* Ocupa toda la altura de la ventana del navegador */
+    margin: 0;
+}
+
+/* Estilo para el contenedor del carrusel */
+.news-carousel {
+    position: relative;
+    width: 80vw; /* Ajusta el tamaño según sea necesario */
+    height: 50vh; /* Ajusta el tamaño según sea necesario */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4; /* Color de fondo opcional */
+    border: 1px solid #ddd; /* Borde opcional */
+}
+
+/* Estilo para el contenedor de noticias */
+.news-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Estilo para cada elemento de la noticia */
+.news-item {
+    flex: 0 0 100%; /* Cada noticia ocupa el 100% del contenedor */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    height: 100%; /* Asegura que la noticia ocupe todo el alto del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+}
+
+/* Estilo para las flechas de navegación */
+.news-carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.news-carousel .prev {
+    left: 10px;
+}
+
+.news-carousel .next {
+    right: 10px;
+}
+/* Estilo para la sección de servicios */
+#servicios {
+    padding: 20px;
+    background-color: #f9f9f9; /* Color de fondo opcional */
+}
+
+/* Contenedor para las categorías de servicios */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo para cada tarjeta de categoría de servicio */
+.service-category {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-category h3 {
+    margin-top: 0;
+}
+
+.service-category p {
+    margin: 10px 0 0;
+}
+
+/* Estilo para las nuevas secciones de detalles de servicios */
+.service-detail {
+    display: none; /* Ocultar por defecto */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.service-detail h2 {
+    font-size: 24px;
+}
+
+.service-detail p {
+    font-size: 16px;
+}
+/* Estilo general para los botones con la clase .btn-5 */
+.btn-5 {
+    position: relative;
+    border: 3px solid #17a2ff;
+    background: transparent;
+    color: #51add8;
+    padding: 10px 20px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    z-index: 1;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+/* Pseudoelementos para los efectos visuales del botón */
+.btn-5::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(255, 198, 10);
+    z-index: -2;
+    transition: background-color 0.3s;
+}
+
+.btn-5::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    left: 0;
+    bottom: -150%;
+    border-radius: 30%;
+    background-color: rgb(248, 250, 255);
+    z-index: -1;
+    transition: bottom 2s, transform 2s;
+}
+
+.btn-5:hover::before {
+    animation: btn-5 2s linear both;
+}
+
+@keyframes btn-5 {
+    0% {
+        transform: rotate(0deg);
+        bottom: -150%;
+    }
+    100% {
+        transform: rotate(360deg);
+        bottom: 0;
+    }
+}
+
+.btn-5:hover {
+    color: rgb(18, 19, 19);
+    border-color: #007bff;
+}
+/* Asegúrate de que los botones estén alineados al final de cada contenedor de servicios */
+.service-category {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* Permite el posicionamiento de los elementos dentro */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    height: 300px; /* Ajusta la altura según sea necesario */
+}
+
+.service-category button {
+    align-self: center; /* Centra el botón dentro del contenedor */
+    margin-top: auto; /* Empuja el botón al final del contenedor */
+}
